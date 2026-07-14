@@ -170,6 +170,11 @@ int main(int argc, char* argv[]) {
   logformat("Exiting...");
   tb_shutdown();
 
+  logformat("Freeing...");
+
+  deleteString(context.content);
+  deleteString(context.temp_str);
+
   logformat("Finalizing Logger...");
 
   return loggerok();
